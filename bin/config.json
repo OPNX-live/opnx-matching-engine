@@ -1,0 +1,51 @@
+{
+  "StartupParameters": {
+    "ServiceUrl": "pulsar://localhost:6650",
+    "ReferencePair": "BTC/USD"
+  },
+  "implied": {
+    "SPOT": [{
+      "leg1": "PERP",
+      "leg2": "REPO",
+      "exclude": [],
+      "type": 0
+    }],
+    "FUTURE": [{
+      "leg1": "SPREAD",
+      "leg2": "PERP",
+      "exclude": [],
+      "type": 1
+    }],
+    "PERP": [{
+      "leg1": "FUTURE",
+      "leg2": "SPREAD",
+      "exclude": [],
+      "type": 2
+      },
+      {
+        "leg1": "SPOT",
+        "leg2": "REPO",
+        "exclude": [],
+        "type": 4
+      }],
+    "SPREAD": [{
+      "leg1": "FUTURE",
+      "leg2": "PERP",
+      "exclude": [],
+      "type": 3
+    }],
+    "REPO": [{
+      "leg1": "SPOT",
+      "leg2": "PERP",
+      "exclude": [],
+      "type": 5
+    }]
+  },
+  "logLevel": 4,
+  "orderOutThreadNumber": 1,
+  "ordersOutThreadNumber": 3,
+  "orderBookCycle": 100,
+  "orderBookDepth": 400,
+  "impliedDepth": 50,
+  "enableAuction": false
+}

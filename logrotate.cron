@@ -1,0 +1,1 @@
+*/5 *  *  *  * logrotate /app/logrotate.conf
